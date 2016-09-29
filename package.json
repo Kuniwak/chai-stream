@@ -2,9 +2,9 @@
   "name": "chai-stream",
   "version": "0.0.0",
   "description": "Extends Chai with assertions about streams.",
-  "main": "src/index.js",
+  "main": "dist/chai-stream.js",
   "scripts": {
-    "prepublish": "mkdir -p dist && browserify src/browser.js -t babelify --outfile dist/chai-stream.js",
+    "install": "mkdir -p dist && browserify src/browser.js -t babelify --outfile dist/chai-stream.js",
     "test": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill tests --timeout 10000",
     "test-watch": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill tests --timeout 10000 -w"
   },

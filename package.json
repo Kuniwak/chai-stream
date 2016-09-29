@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "prepublish": "mkdir -p dist && browserify src/browser.js -t babelify --outfile dist/chai-stream.js",
-    "test": "mocha --compilers js:mocha-babel tests --timeout 10000"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill tests --timeout 10000",
+    "test-watch": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill tests --timeout 10000 -w"
   },
   "repository": {
     "type": "git",

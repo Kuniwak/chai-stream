@@ -1,5 +1,6 @@
+'use strict';
 const chai = require('chai');
-const {AssertionError} = chai;
+const AssertionError = chai.AssertionError;
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const highland = require('highland');
@@ -33,7 +34,7 @@ const TestCases = [
 ];
 
 describe('assert', () => {
-  const {assert} = chai;
+const assert = chai.assert;
 
   describe('.streamWillEnd', () => {
     TestCases.forEach((testCase) => {
@@ -75,7 +76,7 @@ describe('assert', () => {
 });
 
 describe('expect(obj)', () => {
-  const {expect} = chai;
+const expect = chai.expect;
 
   describe('.to.end', () => {
     TestCases.forEach((testCase) => {

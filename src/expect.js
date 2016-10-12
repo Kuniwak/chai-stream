@@ -1,13 +1,12 @@
-const {
-  isStream,
-  isReadable,
-  isWritable,
-  waitUntilEndEventFired,
-  TimeoutError
-} = require('./helpers');
+'use strict';
+const isStream = require('./helpers').isStream,
+  isReadable = require('./helpers').isReadable,
+  isWritable = require('./helpers').isWritable,
+  waitUntilEndEventFired = require('./helpers').waitUntilEndEventFired,
+  TimeoutError = require('./helpers').TimeoutError;
 
 function extendExpectStyle(chai, utils) {
-  const {Assertion, AssertionError} = chai;
+const Assertion = chai.Assertion, AssertionError = chai.AssertionError;
 
   /*
    * Examples:

@@ -1,4 +1,3 @@
-'use strict';
 (function() {
   const chaiStream = require('./index');
 

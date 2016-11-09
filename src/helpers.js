@@ -1,4 +1,3 @@
-'use strict';
 const highland = require('highland');
 
 function isStream(obj) {

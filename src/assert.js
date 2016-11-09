@@ -1,12 +1,13 @@
-'use strict';
-const isStream = require('./helpers').isStream,
-  isReadable = require('./helpers').isReadable,
-  isWritable = require('./helpers').isWritable,
-  waitUntilEndEventFired = require('./helpers').waitUntilEndEventFired,
-  TimeoutError = require('./helpers').TimeoutError;
+const {
+  isStream,
+  isReadable,
+  isWritable,
+  waitUntilEndEventFired,
+  TimeoutError,
+} = require('./helpers');
 
 function extendTDDStyle(chai, utils) {
-const assert = chai.assert, AssertionError = chai.AssertionError;
+  const {assert, AssertionError} = chai;
 
   /*
    * Examples:

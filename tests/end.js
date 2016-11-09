@@ -1,6 +1,5 @@
-'use strict';
 const chai = require('chai');
-const AssertionError = chai.AssertionError;
+const {AssertionError} = chai;
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const highland = require('highland');
@@ -34,7 +33,7 @@ const TestCases = [
 ];
 
 describe('assert', () => {
-const assert = chai.assert;
+  const {assert} = chai;
 
   describe('.streamWillEnd', () => {
     TestCases.forEach((testCase) => {
@@ -61,6 +60,7 @@ const assert = chai.assert;
         it(`should return a promise will be resolved when ` +
           `${testCase.name} arrived`, () => {
             const promise = assert.streamWillNotEnd(testCase.factory());
+            console.log(promise);
             return assert.isFulfilled(promise);
           });
         return;
@@ -76,7 +76,7 @@ const assert = chai.assert;
 });
 
 describe('expect(obj)', () => {
-const expect = chai.expect;
+  const {expect} = chai;
 
   describe('.to.end', () => {
     TestCases.forEach((testCase) => {

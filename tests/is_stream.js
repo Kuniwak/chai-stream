@@ -1,12 +1,8 @@
-'use strict';
 const chai = require('chai');
-const AssertionError = chai.AssertionError;
+const {AssertionError} = chai;
 const chaiStream = require('../src/index');
 chai.use(chaiStream);
-const Readable = require('stream').Readable,
-  Writable = require('stream').Writable,
-  Duplex = require('stream').Duplex,
-  Transform = require('stream').Transform;
+const {Readable, Writable, Duplex, Transform} = require('stream');
 
 const casesForNoStream = [
   {name: 'a null', value: null},
@@ -26,7 +22,7 @@ const casesForStream = [
 ];
 
 describe('assert', () => {
-const assert = chai.assert;
+  const {assert} = chai;
 
   describe('.isStream', () => {
     casesForNoStream.forEach((caseForNoStream) => {
@@ -62,7 +58,7 @@ const assert = chai.assert;
 });
 
 describe('expect', () => {
-const expect = chai.expect;
+  const {expect} = chai;
 
   describe('to.be.a.stream', () => {
     casesForNoStream.forEach((caseForNoStream) => {

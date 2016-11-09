@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile && mkdir -p dist && browserify src/browser.js -t babelify --outfile dist/chai-stream.js",
-    "test": "mocha tests --timeout 10000"
+    "test": "mocha --require babel-core/register tests --timeout 10000"
   },
   "repository": {
     "type": "git",

@@ -60,7 +60,6 @@ describe('assert', () => {
         it(`should return a promise will be resolved when ` +
           `${testCase.name} arrived`, () => {
             const promise = assert.streamWillNotEnd(testCase.factory());
-            console.log(promise);
             return assert.isFulfilled(promise);
           });
         return;

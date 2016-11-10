@@ -1,3 +1,4 @@
+import Error from 'es6-error';
 const highland = require('highland');
 
 function isStream(obj) {

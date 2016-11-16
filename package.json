@@ -2,7 +2,7 @@
   "name": "chai-stream",
   "version": "0.0.0",
   "description": "Extends Chai with assertions about streams.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile && mkdir -p dist && browserify src/browser.js -t babelify --outfile dist/chai-stream.js",

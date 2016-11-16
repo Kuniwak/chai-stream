@@ -1,5 +1,5 @@
-import Error from 'es6-error';
 const highland = require('highland');
+const Error = require('es6-error');
 
 function isStream(obj) {
   return obj && typeof obj.pipe === 'function';

@@ -27,6 +27,7 @@
   "dependencies": {
     "es6-error": "^4.0.0",
     "es6-promise": "^3.0.2",
+    "es6-error": "^4.0.0",
     "highland": "^2.5.1"
   },
   "devDependencies": {
